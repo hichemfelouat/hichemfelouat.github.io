@@ -114,6 +114,7 @@ yandex_site_verification :
 
 
 # Social Sharing
+sharing: true
 twitter:
   username               : &twitter
 facebook:
