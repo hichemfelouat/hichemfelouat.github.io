@@ -22,10 +22,11 @@
     overflow-y: auto;               // Add scrollbar if the sidebar is too long
     position: fixed;
     padding-top: $masthead-height;
+    padding-right: 15px;              // <-- ADD THIS
   }
 
   @include breakpoint($large) {
-    @include span(4 of 12);
+    @include span(3 of 12);
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out;
             transition: opacity 0.2s ease-in-out;
@@ -170,6 +171,9 @@
   padding-left: 15px;
   padding-right: 25px;
   line-height: 1;
+  word-wrap: break-word;           // <-- ADD THIS LINE
+  overflow-wrap: break-word;        // <-- ADD THIS LINE
+  word-break: break-word;           // <-- ADD THIS LINE
 
   @include breakpoint($large) {
     display: block;
@@ -304,7 +308,9 @@
   }
 
   li {
-    white-space: nowrap;
+     white-space: normal;              // Allow text to wrap
+     word-wrap: break-word;
+     overflow-wrap: break-word;
   }
 
   a {
