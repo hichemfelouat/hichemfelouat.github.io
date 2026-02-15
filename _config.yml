@@ -23,7 +23,7 @@ repository               : "hichemfelouat/hichemfelouat.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   name: "Hichem Felouat"
-  avatar: "/images/profile.jpg"             # Path to your profile photo
+  avatar: "profile.jpg"             # Path to your profile photo
   bio: "PhD Student at Echizen Laboratory, National Institute of Informatics (NII). Working on 3D Vision & AI Security."
   location: "Tokyo, Japan"
   employer: "National Institute of Informatics (NII)"
