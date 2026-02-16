@@ -24,5 +24,3 @@ My research lies at the intersection of **3D computer vision**, **biometric secu
 ## News
 
 **2025.11:** One 1st-authored paper accepted at WACV 2026.
-
-**2022:** Second place for my thesis in the 180s competition (Algeria)
