@@ -24,11 +24,7 @@ repository               : "hichemfelouat/hichemfelouat.github.io"
 author:
   name: "Hichem Felouat"
   avatar: "profile.jpg"             # Path to your profile photo
-  bio: |
-       PhD Student 
-       Echizen Laboratory, 
-       National Institute of Informatics (NII).
-       Graduate University for Advanced Studies, SOKENDAI.
+  bio: "PhD Student \nEchizen Laboratory,\nNational Institute of Informatics (NII).\nGraduate University for Advanced Studies, SOKENDAI."
   location: "Tokyo, Japan"
   employer: |
             National Institute of 
