@@ -24,9 +24,15 @@ repository               : "hichemfelouat/hichemfelouat.github.io"
 author:
   name: "Hichem Felouat"
   avatar: "profile.jpg"             # Path to your profile photo
-  bio: "PhD Student at Echizen Laboratory, National Institute of Informatics (NII). Working on 3D Vision & AI Security."
+  bio: |
+       PhD Student 
+       Echizen Laboratory, 
+       National Institute of Informatics (NII).
+       Graduate University for Advanced Studies, SOKENDAI.
   location: "Tokyo, Japan"
-  employer: "National Institute of Informatics (NII)"
+  employer: |
+            National Institute of 
+            Informatics (NII)
   pubmed: null
   googlescholar: "https://scholar.google.com/citations?user=KWy1zUMAAAAJ&hl=en"
   email: "hichemfel@nii.ac.jp"
