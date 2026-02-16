@@ -2,13 +2,11 @@
 title: "CV"
 permalink: /cv/
 author_profile: true
-redirect_from:
-  - /resume
 ---
 
 {% include base_path %}
 
-[Download Full CV (PDF)]({{ site.url }}cv.pdf){: .btn .btn--primary}
+[Download CV](/files/cv.pdf){: .btn .btn--primary}
 
 ## Education
 
