@@ -5,8 +5,7 @@ author_profile: true
 ---
 
 {% include base_path %}
-
-[Download CV](/files/cv.pdf){: .btn .btn--primary}
+<a href="/files/cv.pdf" class="btn btn--primary">Download CV</a>
 
 ## Education
 
