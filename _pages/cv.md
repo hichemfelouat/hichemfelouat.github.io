@@ -1,11 +1,19 @@
 ---
+layout: archive
 title: "CV"
 permalink: /cv/
-author_profile: true
+author_profile: false
+redirect_from:
+  - /resume
 ---
 
 {% include base_path %}
-<a href="https://hichemfelouat.github.io/files/cv.pdf" class="btn btn--primary">Download CV</a>
+
+<div class="cv-download-links">
+  <a href="/files/cv.pdf" class="btn btn--primary">Download CV as PDF</a>
+</div>
+
+{% include cv-template.html %}
 
 ## Education
 
