@@ -13,7 +13,7 @@ redirect_from:
   <a href="/files/cv.pdf" class="btn btn--primary">Download CV as PDF</a>
 </div>
 
-{% include cv-template.html %}
+
 
 ## Education
 
