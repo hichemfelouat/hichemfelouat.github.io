@@ -5,7 +5,7 @@ author_profile: true
 ---
 
 {% include base_path %}
-<a href="/files/cv.pdf" class="btn btn--primary">Download CV</a>
+<a href="https://hichemfelouat.github.io/files/cv.pdf" class="btn btn--primary">Download CV</a>
 
 ## Education
 
