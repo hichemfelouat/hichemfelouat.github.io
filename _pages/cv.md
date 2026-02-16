@@ -8,7 +8,7 @@ redirect_from:
 
 {% include base_path %}
 
-[Download Full CV (PDF)]({{ site.url }}/files/cv.pdf){: .btn .btn--primary}
+[Download Full CV (PDF)]({{ site.url }}cv.pdf){: .btn .btn--primary}
 
 ## Education
 
