@@ -409,8 +409,8 @@ author_profile: false
 <div id="sec-awards">
 
 <div class="award-item">
-  <span class="award-year">2022</span>
-  <span class="award-text">Second place for thesis in the <strong>180 Seconds Competition</strong> (Algeria).</span>
+  <span class="award-year">2022</span> 
+  <span class="award-text">Awarded second place in the <strong> My Thesis in 180 Seconds competition </strong> (Algeria).</span>
 </div>
 
 </div>
