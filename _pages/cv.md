@@ -55,7 +55,7 @@ author_profile: false
 
 /* ── Section headers ── */
 .cv-section-header {
-  background: linear-gradient(135deg, #1a56db 0%, #0891b2 100%);
+  background: linear-gradient(135deg, #38bdf8 0%, #7dd3fc 100%);
   border-radius: 6px;
   padding: 0.45em 0.9em;
   margin: 2em 0 1em 0;
