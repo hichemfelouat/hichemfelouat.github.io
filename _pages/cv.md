@@ -31,7 +31,7 @@ author_profile: false
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(135deg, #1a56db 0%, #0891b2 100%);
+  background: linear-gradient(135deg, #38bdf8 0%, #7dd3fc 100%);
   border-radius: var(--radius);
   padding: 1em 1.4em;
   margin-bottom: 2em;
@@ -178,7 +178,7 @@ author_profile: false
   gap: 0.8em;
   padding: 0.7em 1em;
   border-radius: var(--radius);
-  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  background: linear-gradient(135deg, #38bdf8 0%, #7dd3fc 100%);
   border: 1px solid #fcd34d;
   margin-bottom: 0.6em;
 }
