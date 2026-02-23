@@ -55,37 +55,22 @@ author_profile: false
 
 /* ── Section headers ── */
 .cv-section-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 2px solid var(--blue);
-  padding-bottom: 0.35em;
+  background: linear-gradient(135deg, #1a56db 0%, #0891b2 100%);
+  border-radius: 6px;
+  padding: 0.45em 0.9em;
   margin: 2em 0 1em 0;
 }
 .cv-section-header h2 {
   margin: 0;
-  font-size: 1.15em;
-  letter-spacing: 0.04em;
+  font-size: 1.05em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--blue);
+  color: #ffffff !important;
   font-weight: 700;
   border: none !important;
   padding: 0 !important;
 }
-.cv-copy-btn {
-  background: var(--blue-lt);
-  border: 1px solid #c5d8fa;
-  color: var(--blue);
-  border-radius: 5px;
-  padding: 3px 10px;
-  font-size: 0.74em;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background 0.15s;
-  flex-shrink: 0;
-}
-.cv-copy-btn:hover { background: #d0e3ff; }
-.cv-copy-btn.copied { background: #dcfce7; color: #166534; border-color: #86efac; }
+
 
 /* ── Entry cards ── */
 .cv-entry {
@@ -228,7 +213,6 @@ author_profile: false
 <!-- ─────────────── EDUCATION ─────────────── -->
 <div class="cv-section-header">
   <h2>🎓 Education</h2>
-  <button class="cv-copy-btn" onclick="copySection('sec-edu', this)">📋 Copy</button>
 </div>
 <div id="sec-edu">
 
@@ -273,7 +257,6 @@ author_profile: false
 <!-- ─────────────── RESEARCH EXPERIENCE ─────────────── -->
 <div class="cv-section-header">
   <h2>🔬 Research Experience</h2>
-  <button class="cv-copy-btn" onclick="copySection('sec-research', this)">📋 Copy</button>
 </div>
 <div id="sec-research">
 
@@ -330,7 +313,6 @@ author_profile: false
 <!-- ─────────────── AREAS OF EXPERTISE ─────────────── -->
 <div class="cv-section-header">
   <h2>💡 Areas of Expertise</h2>
-  <button class="cv-copy-btn" onclick="copySection('sec-expertise', this)">📋 Copy</button>
 </div>
 <div id="sec-expertise">
   <div class="skill-tags" style="margin-bottom:0.5em;">
@@ -352,7 +334,6 @@ author_profile: false
 <!-- ─────────────── TECHNICAL SKILLS ─────────────── -->
 <div class="cv-section-header">
   <h2>🛠 Technical Skills</h2>
-  <button class="cv-copy-btn" onclick="copySection('sec-skills', this)">📋 Copy</button>
 </div>
 <div id="sec-skills">
 
@@ -400,7 +381,6 @@ author_profile: false
 <!-- ─────────────── LANGUAGES ─────────────── -->
 <div class="cv-section-header">
   <h2>🌐 Languages</h2>
-  <button class="cv-copy-btn" onclick="copySection('sec-lang', this)">📋 Copy</button>
 </div>
 <div id="sec-lang">
 
@@ -425,7 +405,6 @@ author_profile: false
 <!-- ─────────────── HONORS & AWARDS ─────────────── -->
 <div class="cv-section-header">
   <h2>🏆 Honors &amp; Awards</h2>
-  <button class="cv-copy-btn" onclick="copySection('sec-awards', this)">📋 Copy</button>
 </div>
 <div id="sec-awards">
 
@@ -435,31 +414,3 @@ author_profile: false
 </div>
 
 </div>
-
-<script>
-function copySection(id, btn) {
-  var el = document.getElementById(id);
-  if (!el) return;
-  var text = el.innerText.trim();
-  navigator.clipboard.writeText(text).then(function() {
-    btn.textContent = '✅ Copied!';
-    btn.classList.add('copied');
-    setTimeout(function() {
-      btn.textContent = '📋 Copy';
-      btn.classList.remove('copied');
-    }, 2200);
-  }).catch(function() {
-    // Fallback for older browsers
-    var ta = document.createElement('textarea');
-    ta.value = text;
-    ta.style.position = 'fixed';
-    ta.style.opacity = '0';
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
-    document.body.removeChild(ta);
-    btn.textContent = '✅ Copied!';
-    setTimeout(function() { btn.textContent = '📋 Copy'; }, 2200);
-  });
-}
-</script>
