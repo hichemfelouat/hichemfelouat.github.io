@@ -13,35 +13,22 @@ author_profile: false
   -moz-user-select: text !important;
 }
 
-/* ── Base variables ── */
-:root {
-  --blue:    #1a56db;
-  --blue-lt: #e8f0fe;
-  --teal:    #0891b2;
-  --gray:    #64748b;
-  --border:  #e2e8f0;
-  --bg-soft: #f8fafc;
-  --text:    #1e293b;
-  --radius:  10px;
-  --shadow:  0 2px 12px rgba(0,0,0,0.07);
-}
-
 /* ── Download bar ── */
 .cv-download-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(135deg, #38bdf8 0%, #7dd3fc 100%);
-  border-radius: var(--radius);
+  background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%);
+  border-radius: 10px;
   padding: 1em 1.4em;
   margin-bottom: 2em;
   color: white;
 }
 .cv-download-bar strong { font-size: 1.05em; }
-.cv-download-bar small { opacity: 0.85; font-size: 0.82em; }
+.cv-download-bar small  { opacity: 0.85; font-size: 0.82em; }
 .cv-dl-btn {
   background: white;
-  color: var(--blue);
+  color: #0ea5e9;
   font-weight: 700;
   border: none;
   padding: 0.55em 1.2em;
@@ -51,11 +38,11 @@ author_profile: false
   transition: box-shadow 0.2s;
   white-space: nowrap;
 }
-.cv-dl-btn:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.15); color: var(--blue); }
+.cv-dl-btn:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.18); color: #0ea5e9; }
 
 /* ── Section headers ── */
 .cv-section-header {
-  background: linear-gradient(135deg, #38bdf8 0%, #7dd3fc 100%);
+  background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%);
   border-radius: 6px;
   padding: 0.45em 0.9em;
   margin: 2em 0 1em 0;
@@ -71,22 +58,20 @@ author_profile: false
   padding: 0 !important;
 }
 
-
-/* ── Entry cards ── */
+/* ── Entry cards — dark mode safe ── */
 .cv-entry {
   display: flex;
   gap: 1em;
   padding: 0.9em 1.1em;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border: 1px solid rgba(128,128,128,0.2);
+  border-radius: 10px;
   margin-bottom: 0.7em;
-  background: white;
   transition: box-shadow 0.18s, border-color 0.18s;
   position: relative;
 }
 .cv-entry:hover {
-  box-shadow: var(--shadow);
-  border-color: #b8d0fa;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  border-color: rgba(14,165,233,0.45);
 }
 .cv-entry-left {
   min-width: 130px;
@@ -96,50 +81,50 @@ author_profile: false
 }
 .cv-entry-date {
   font-size: 0.78em;
-  color: var(--gray);
   font-weight: 600;
   line-height: 1.4;
-  background: var(--bg-soft);
+  border: 1px solid rgba(128,128,128,0.25);
   border-radius: 4px;
   padding: 2px 7px;
   display: inline-block;
+  opacity: 0.7;
 }
 .cv-entry-body { flex: 1; }
-.cv-entry-body strong { color: var(--text); font-size: 0.97em; }
+.cv-entry-body strong { font-size: 0.97em; }
 .cv-entry-body .cv-inst {
-  color: var(--teal);
+  color: #0ea5e9;
   font-size: 0.88em;
   font-weight: 600;
   margin-top: 1px;
 }
 .cv-entry-body .cv-loc {
-  color: var(--gray);
   font-size: 0.82em;
+  opacity: 0.6;
 }
 .cv-entry-body .cv-bullets {
   margin: 0.45em 0 0 0;
   padding-left: 1.1em;
   font-size: 0.87em;
-  color: #334155;
+  opacity: 0.8;
   line-height: 1.6;
 }
 .cv-entry-body .cv-bullets li { margin-bottom: 2px; }
 
-/* ── Skill tags ── */
+/* ── Skill tags — dark mode safe ── */
 .skill-group { margin-bottom: 0.85em; }
 .skill-group-label {
   font-size: 0.8em;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--gray);
+  opacity: 0.5;
   margin-bottom: 0.4em;
 }
 .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .skill-tag {
-  background: var(--bg-soft);
-  border: 1px solid var(--border);
-  color: var(--text);
+  background: transparent;
+  border: 1px solid rgba(128,128,128,0.35);
+  color: inherit;
   border-radius: 20px;
   padding: 3px 12px;
   font-size: 0.82em;
@@ -148,38 +133,47 @@ author_profile: false
   cursor: default;
 }
 .skill-tag:hover {
-  background: var(--blue-lt);
-  border-color: #93b8fa;
-  color: var(--blue);
+  background: rgba(14,165,233,0.12);
+  border-color: rgba(14,165,233,0.5);
+  color: #38bdf8;
 }
 .skill-tag.highlight {
-  background: var(--blue-lt);
-  border-color: #93b8fa;
-  color: var(--blue);
+  background: rgba(14,165,233,0.12);
+  border-color: rgba(14,165,233,0.45);
+  color: #38bdf8;
   font-weight: 600;
 }
 
-/* ── Language bars ── */
+/* ── Language bars — dark mode safe ── */
 .lang-row {
   display: flex;
   align-items: center;
   gap: 0.8em;
-  margin-bottom: 0.55em;
+  margin-bottom: 0.65em;
 }
-.lang-name { width: 90px; font-size: 0.9em; font-weight: 600; }
-.lang-level { font-size: 0.78em; color: var(--gray); width: 80px; }
-.lang-bar { flex: 1; height: 7px; background: var(--border); border-radius: 4px; overflow: hidden; }
-.lang-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--blue), var(--teal)); }
+.lang-name  { width: 90px; font-size: 0.9em; font-weight: 600; }
+.lang-level {
+  font-size: 0.78em;
+  font-weight: 600;
+  width: 85px;
+  padding: 2px 8px;
+  border-radius: 5px;
+  border: 1px solid rgba(14,165,233,0.4);
+  color: #38bdf8;
+  text-align: center;
+}
+.lang-bar  { flex: 1; height: 7px; background: rgba(128,128,128,0.2); border-radius: 4px; overflow: hidden; }
+.lang-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #0ea5e9, #38bdf8); }
 
-/* ── Awards ── */
+/* ── Awards — dark mode safe ── */
 .award-item {
   display: flex;
   align-items: flex-start;
   gap: 0.8em;
   padding: 0.7em 1em;
-  border-radius: var(--radius);
-  background: linear-gradient(135deg, #38bdf8 0%, #7dd3fc 100%);
-  border: 1px solid #fcd34d;
+  border-radius: 10px;
+  border: 1px solid rgba(245,158,11,0.4);
+  background: rgba(245,158,11,0.07);
   margin-bottom: 0.6em;
 }
 .award-year {
@@ -191,8 +185,9 @@ author_profile: false
   border-radius: 4px;
   white-space: nowrap;
   margin-top: 1px;
+  flex-shrink: 0;
 }
-.award-text { font-size: 0.9em; color: #78350f; }
+.award-text { font-size: 0.9em; opacity: 0.88; }
 
 /* ── Responsive ── */
 @media (max-width: 600px) {
@@ -214,7 +209,6 @@ author_profile: false
 <div class="cv-section-header">
   <h2>🎓 Education</h2>
 </div>
-<div id="sec-edu">
 
 <div class="cv-entry">
   <div class="cv-entry-left"><span class="cv-entry-date">10/2022 – 07/2027</span></div>
@@ -252,13 +246,10 @@ author_profile: false
   </div>
 </div>
 
-</div>
-
 <!-- ─────────────── RESEARCH EXPERIENCE ─────────────── -->
 <div class="cv-section-header">
   <h2>🔬 Research Experience</h2>
 </div>
-<div id="sec-research">
 
 <div class="cv-entry">
   <div class="cv-entry-left"><span class="cv-entry-date">10/2022 – Present</span></div>
@@ -308,14 +299,12 @@ author_profile: false
   </div>
 </div>
 
-</div>
-
 <!-- ─────────────── AREAS OF EXPERTISE ─────────────── -->
 <div class="cv-section-header">
   <h2>💡 Areas of Expertise</h2>
 </div>
-<div id="sec-expertise">
-  <div class="skill-tags" style="margin-bottom:0.5em;">
+<div style="padding: 0.3em 0 0.5em 0;">
+  <div class="skill-tags">
     <span class="skill-tag highlight">Artificial Intelligence</span>
     <span class="skill-tag highlight">Deep Learning</span>
     <span class="skill-tag highlight">Computer Vision &amp; 3D Vision</span>
@@ -335,7 +324,7 @@ author_profile: false
 <div class="cv-section-header">
   <h2>🛠 Technical Skills</h2>
 </div>
-<div id="sec-skills">
+<div style="padding-top: 0.3em;">
 
 <div class="skill-group">
   <div class="skill-group-label">Deep Learning Frameworks</div>
@@ -382,7 +371,7 @@ author_profile: false
 <div class="cv-section-header">
   <h2>🌐 Languages</h2>
 </div>
-<div id="sec-lang">
+<div style="padding-top: 0.5em;">
 
 <div class="lang-row">
   <div class="lang-name">English</div>
@@ -406,11 +395,8 @@ author_profile: false
 <div class="cv-section-header">
   <h2>🏆 Honors &amp; Awards</h2>
 </div>
-<div id="sec-awards">
 
 <div class="award-item">
-  <span class="award-year">2022</span> 
+  <span class="award-year">2022</span>
   <span class="award-text">Awarded second place in the <strong> My Thesis in 180 Seconds competition </strong> (Algeria).</span>
-</div>
-
 </div>
