@@ -211,11 +211,11 @@ author_profile: True
 </div>
 
 <div class="cv-entry">
-  <div class="cv-entry-left"><span class="cv-entry-date">10/2022 – 07/2027</span></div>
+  <div class="cv-entry-left"><span class="cv-entry-date">2022 – 2027</span></div>
   <div class="cv-entry-body">
     <strong>PhD2 in Information Security</strong> <em>(Current)</em>
     <div class="cv-inst">National Institute of Informatics (NII) · SOKENDAI</div>
-    <div class="cv-loc">📍 Tokyo, Japan — Echizen Laboratory</div>
+    <div class="cv-loc">📍 Tokyo, Japan - Echizen Laboratory</div>
   </div>
 </div>
 
