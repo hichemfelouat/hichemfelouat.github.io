@@ -153,19 +153,20 @@ author_profile: true
 <div id="pub-stats" class="pub-stats"></div>
 <div id="pub-list"></div>
 
+{% raw %}
 <script>
-/* ═══════════════════════════════════════════════════════
-   PUBLICATIONS DICTIONARY
-   To add a paper: copy one object and fill in the fields.
-   Fields:
-     title    — full paper title
-     type     — "conference" | "journal" | "preprint"
-     venue    — journal/conference name
-     month    — e.g. "January" (or "" if unknown)
-     year     — number, e.g. 2026
-     abstract — short description
-     url      — link to paper (use "" if not available)
-══════════════════════════════════════════════════════ */
+/*
+  PUBLICATIONS DICTIONARY
+  To add a paper: copy one object and fill in the fields.
+  Fields:
+    title    - full paper title
+    type     - "conference" | "journal" | "preprint"
+    venue    - journal/conference name
+    month    - e.g. "January" (or "" if unknown)
+    year     - number, e.g. 2026
+    abstract - short description
+    url      - link to paper (use "" if not available)
+*/
 var PUBLICATIONS = [
   {
     title:    "GFT-GCN: Privacy-Preserving 3D Face Mesh Recognition with Spectral Diffusion",
@@ -176,7 +177,6 @@ var PUBLICATIONS = [
     abstract: "3D face recognition provides strong security but requires protection of stored biometric templates. We propose GFT-GCN, a privacy-preserving framework that combines spectral graph learning and diffusion-based template protection to generate secure, irreversible templates. Experiments on BU-3DFE and FaceScape show high accuracy and strong resistance to reconstruction attacks, achieving a good balance between privacy and performance.",
     url:      "https://arxiv.org/pdf/2511.19958"
   },
-  //-----------------------------------------------------------------------------------------
   {
     title:    "3DDGD: 3D Deepfake Generation and Detection Using 3D Face Meshes",
     type:     "journal",
@@ -186,7 +186,6 @@ var PUBLICATIONS = [
     abstract: "3D face technology offers stronger security than 2D methods in biometric authentication. This study enhances 3D facial systems against deepfakes by demonstrating the superiority of 3D over 2D, creating a real/fake 3D face dataset, and developing deepfake detection models using MLP, self-attention, and TabTransformer. Results show that 3D face meshes significantly improve deepfake detection robustness.",
     url:      "https://ieeexplore.ieee.org/abstract/document/11039631/"
   },
-  //-----------------------------------------------------------------------------------------
   {
     title:    "eKYC-DF: A Large-Scale Deepfake Dataset for Developing and Evaluating eKYC Systems",
     type:     "journal",
@@ -196,20 +195,13 @@ var PUBLICATIONS = [
     abstract: "eKYC systems are vulnerable to advanced deepfakes, and existing datasets are not suitable for evaluating such attacks. To address this, a large-scale dataset of 228,000+ diverse fake videos with proper evaluation protocols was created specifically for eKYC systems.",
     url:      "https://ieeexplore.ieee.org/abstract/document/10444105"
   }
-  //-----------------------------------------------------------------------------------------
-
-  //-----------------------------------------------------------------------------------------
-  //-----------------------------------------------------------------------------------------
 ];
 
-/* ── Render ─────────────────────────────────────── */
 (function () {
-  // Sort newest first
   var papers = PUBLICATIONS.slice().sort(function (a, b) {
     return b.year !== a.year ? b.year - a.year : 0;
   });
 
-  // Stats
   var counts = { total: papers.length, conference: 0, journal: 0, preprint: 0 };
   papers.forEach(function (p) { if (counts[p.type] !== undefined) counts[p.type]++; });
 
@@ -220,11 +212,10 @@ var PUBLICATIONS = [
     stat(counts.journal,    'Journal')      +
     (counts.preprint ? stat(counts.preprint, 'Preprint') : '');
 
-  // Cards grouped by year
-  var listEl  = document.getElementById('pub-list');
-  var html    = '';
+  var listEl   = document.getElementById('pub-list');
+  var html     = '';
   var lastYear = null;
-  var delay   = 0.05;
+  var delay    = 0.05;
 
   papers.forEach(function (p) {
     if (p.year !== lastYear) {
@@ -232,16 +223,16 @@ var PUBLICATIONS = [
       lastYear = p.year;
     }
     var dateStr = p.month ? p.month + ' ' + p.year : '' + p.year;
-    html += '<div class="pub-card" style="animation-delay:' + delay + 's">' +
-      '<div class="pub-meta">' +
-        '<span class="pub-type pub-type-' + p.type + '">' + p.type + '</span>' +
-        '<span class="pub-venue">' + esc(p.venue) + '</span>' +
-        '<span class="pub-date">' + esc(dateStr) + '</span>' +
-      '</div>' +
-      '<div class="pub-title">' + esc(p.title) + '</div>' +
-      '<div class="pub-abstract">' + esc(p.abstract) + '</div>' +
-      (p.url ? '<a href="' + p.url + '" target="_blank" class="pub-btn">📄 Paper</a>' : '') +
-    '</div>';
+    html += '<div class="pub-card" style="animation-delay:' + delay + 's">'
+      + '<div class="pub-meta">'
+      +   '<span class="pub-type pub-type-' + p.type + '">' + p.type + '</span>'
+      +   '<span class="pub-venue">' + esc(p.venue) + '</span>'
+      +   '<span class="pub-date">'  + esc(dateStr)  + '</span>'
+      + '</div>'
+      + '<div class="pub-title">'    + esc(p.title)    + '</div>'
+      + '<div class="pub-abstract">' + esc(p.abstract) + '</div>'
+      + (p.url ? '<a href="' + p.url + '" target="_blank" class="pub-btn">Paper</a>' : '')
+      + '</div>';
     delay += 0.08;
   });
 
@@ -252,8 +243,9 @@ var PUBLICATIONS = [
   }
   function esc(s) {
     return String(s)
-      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
-      .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 })();
 </script>
+{% endraw %}
