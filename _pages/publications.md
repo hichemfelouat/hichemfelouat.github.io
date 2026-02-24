@@ -194,7 +194,37 @@ var PUBLICATIONS = [
     year:     2024,
     abstract: "eKYC systems are vulnerable to advanced deepfakes, and existing datasets are not suitable for evaluating such attacks. To address this, a large-scale dataset of 228,000+ diverse fake videos with proper evaluation protocols was created specifically for eKYC systems.",
     url:      "https://ieeexplore.ieee.org/abstract/document/10444105"
+  },
+    {
+    title:    "An arabic visual speech recognition framework with CNN and vision transformers for lipreading",
+    type:     "journal",
+    venue:    "Multimedia Tools and Applications",
+    month:    "August",
+    year:     2024,
+    abstract: "This paper introduces BlidAVS10, a new Arabic audio-visual speech recognition framework and dataset of 1,383 videos. Using deep learning models such as CNNs and Vision Transformers, the system achieves nearly 98% accuracy and supports applications in assistive technology, security, and silent human–machine communication.",
+    url:      "https://link.springer.com/article/10.1007/s11042-024-18237-5?fbclid=IwAR37pvFA3ZiFhXSNQuME4a1uUI7dne697AALgq86cmfyh2l9g6W3zZc7mUY"
+  },
+  
+  {
+    title:    "Graph convolutional networks and functional connectivity for identification of autism spectrum disorder",
+    type:     "conference",
+    venue:    "EDiS",
+    month:    "November",
+    year:     2020,
+    abstract: "This study applies graph convolutional networks (GCNs) to classify autism spectrum disorder (ASD) using resting-state fMRI data from the ABIDE I dataset. Brain functional connectivity graphs were constructed using the CC400 atlas, and graph features were used for classification. The proposed approach achieved 70% accuracy, demonstrating its effectiveness in identifying ASD from healthy subjects.",
+    url:      "https://ieeexplore.ieee.org/abstract/document/9296476/"
+  },
+
+  {
+    title:    "Graph matching approach and generalized median graph for automatic labeling of cortical sulci with parallel and distributed algorithms",
+    type:     "journal",
+    venue:    "Cognitive Systems Research",
+    month:    "May",
+    year:     2018,
+    abstract: "This paper proposes a graph-based approach for automatic labeling of cortical sulci from MRI images. Using graph matching and generalized median graphs with parallel algorithms, the method models sulci based on shape, orientation, and location. Results demonstrate accurate and reliable performance despite the complexity and variability of the human cortex.",
+    url:      "https://www.sciencedirect.com/science/article/abs/pii/S1389041718301402"
   }
+  
 ];
 
 (function () {
