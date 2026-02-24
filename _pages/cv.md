@@ -199,7 +199,7 @@ author_profile: True
 
 <div class="cv-download-bar">
   <div>
-    <strong>Hichem Felouat — Curriculum Vitae</strong><br>
+    <strong>Hichem Felouat - Curriculum Vitae</strong><br>
     <small>PhD Student · National Institute of Informatics, Tokyo · Last updated February 2026</small>
   </div>
   <a href="/files/cv.pdf" class="cv-dl-btn">⬇ Download PDF</a>
