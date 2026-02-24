@@ -398,5 +398,5 @@ author_profile: True
 
 <div class="award-item">
   <span class="award-year">2022</span>
-  <span class="award-text">Awarded second place in the <strong> My Thesis in 180 Seconds competition </strong> (Algeria).</span>
+  <span class="award-text">Awarded second place in <strong> My Thesis in 180 Seconds competition </strong> (Algeria).</span>
 </div>
