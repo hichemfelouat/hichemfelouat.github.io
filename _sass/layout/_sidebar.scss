@@ -328,3 +328,68 @@
     }
   }
 }
+
+/* ==========================================================================
+   MOBILE AUTHOR SIDEBAR FIX
+   Prevents the links dropdown from overlapping page content on small screens
+   ========================================================================== */
+@media screen and (max-width: 1023px) {
+  /* Stack the author header row vertically */
+  .sidebar {
+    display: block;
+    width: 100%;
+  }
+
+  /* Make the top author row a flex column so avatar, name, and button stack */
+  .author__avatar,
+  .author__content,
+  .author__urls-wrapper {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    vertical-align: top;
+  }
+
+  /* Avatar sits inline on the left, small */
+  .author__avatar {
+    display: inline-block;
+    width: 50px;
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+
+  .author__content {
+    display: inline-block;
+    width: calc(100% - 70px);
+    vertical-align: middle;
+  }
+
+  /* The Follow button spans full width below avatar+name */
+  .author__urls-wrapper {
+    margin-top: 10px;
+  }
+
+  .author__urls-wrapper button {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Dropdown: full width, relative position — no longer floats over content */
+  .author__urls {
+    position: relative !important;
+    right: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    margin-top: 8px !important;
+    z-index: 1 !important;
+    box-shadow: none !important;
+    border-radius: 6px !important;
+  }
+
+  /* Hide the dropdown arrow */
+  .author__urls:before,
+  .author__urls:after {
+    display: none !important;
+  }
+}
