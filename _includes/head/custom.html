@@ -1,3 +1,45 @@
 {% include base_path %}
 
+<!-- start custom head snippets -->
 
+<!-- Support for Academicons via CDN (includes woff2 support) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"/>
+
+<!-- favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png"/>
+<link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg"/>
+<link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-32x32.png" sizes="32x32"/>
+<link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-192x192.png" sizes="192x192"/>
+<link rel="manifest" href="{{ base_path }}/images/manifest.json"/>
+<link rel="icon" href="/images/favicon.ico"/>
+<meta name="theme-color" content="#ffffff"/>
+
+<!-- Mobile: always show author links, no floating dropdown overlay -->
+<style>
+@media screen and (max-width: 1023px) {
+  .author__urls-wrapper button {
+    display: none !important;
+  }
+  .author__urls {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    margin: 8px 0 0 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    z-index: auto !important;
+  }
+  .author__urls:before,
+  .author__urls:after {
+    display: none !important;
+  }
+  .author__urls-wrapper {
+    display: block !important;
+    width: 100% !important;
+  }
+}
+</style>
+
+<!-- end custom head snippets -->
